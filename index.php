@@ -5,9 +5,9 @@ get_header(); ?>
         <main id="main" class="site-main">
 
             <?php
-            if ( have_posts() ) :
+            if (have_posts()) :
 
-                if ( is_home() && ! is_front_page() ) :
+                if (is_home() && !is_front_page()) :
                     ?>
                     <header>
                         <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
@@ -16,13 +16,13 @@ get_header(); ?>
                 endif;
 
                 /* Starte die Schleife */
-                while ( have_posts() ) :
+                while (have_posts()) :
                     the_post();
 
                     /*
                      * Enthält das Post-Format-spezifische Template für den Inhalt.
                      */
-                    get_template_part( 'template-parts/content', get_post_format() );
+                    get_template_part('template-parts/content', get_post_format());
 
                 endwhile;
 
@@ -30,7 +30,7 @@ get_header(); ?>
 
             else :
 
-                get_template_part( 'template-parts/content', 'none' );
+                get_template_part('template-parts/content', 'none');
 
             endif;
             ?>
