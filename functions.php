@@ -1,7 +1,7 @@
 <?php
 function fxwp_theme_styles()
 {
-    wp_enqueue_style('fxwp_theme_style', get_stylesheet_uri());
+    wp_enqueue_style('fxwp_theme_style', str_replace('style.css', 'style.min.css', get_stylesheet_uri()));
 }
 
 add_action('wp_enqueue_scripts', 'fxwp_theme_styles');
@@ -19,5 +19,6 @@ function fxwp_theme_register_menus()
 
 add_action('init', 'fxwp_theme_register_menus');
 
-/* Hier können Sie zusätzliche Funktionen für Ihr Theme hinzufügen. */
-
+// Kommentare vollständig deaktivieren
+add_filter( 'comments_open', '__return_false', 20, 2 );
+add_filter( 'pings_open', '__return_false', 20, 2 );
