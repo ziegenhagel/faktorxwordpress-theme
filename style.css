@@ -9,3 +9,34 @@ Text Domain: fxwp
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.footer-menu {
+    @apply py-3 px-2
+}
+
+.footer-menu ul {
+    @apply flex flex-col border-t border-gray-200
+}
+
+.footer-menu li {
+    margin-right: 10px
+}
+
+.footer-menu li:last-child {
+    margin-right: 0
+}
+
+.footer-menu a {
+    @apply text-gray-800 hover:underline block
+}
+
+footer p {
+    @apply text-gray-800 px-2 block
+}
+
+/* on bigger screens */
+@media (min-width: 768px) {
+    .footer-menu ul {
+        @apply flex-row
+    }
+}
