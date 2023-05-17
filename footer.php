@@ -10,9 +10,9 @@ for ($i = 1; $i <= 4; $i++) {
 if (!empty($columns_content)) :
     ?>
     <section class="pre-footer-section">
-        <div class="flex container mx-auto py-6">
+        <div class="flex flex-col container mx-auto gap-6 md:flex-row py-3 md:py-8">
             <?php foreach ($columns_content as $content) : ?>
-                <div class="whitespace-pre-line flex-1"><?php echo wp_kses_post($content); ?></div>
+                <div class="whitespace-pre-line p-4 flex-1 md:p-0 "><?php echo wp_kses_post($content); ?></div>
             <?php endforeach; ?>
         </div>
     </section>

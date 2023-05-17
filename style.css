@@ -30,7 +30,7 @@ Text Domain: fxwp
 }
 
 .footer-menu > ul > li > a {
-    @apply block;
+    /*@apply inblock;*/
     color: var(--footer-color);
 }
 
@@ -61,6 +61,7 @@ body {
 }
 
 footer {
+    @apply px-4;
     background: var(--footer-bg);
     color: var(--footer-color);
 }
@@ -113,6 +114,10 @@ main {
 
     .footer-menu ul {
         @apply flex-row;
+    }
+
+    footer {
+        @apply px-0;
     }
 
 }
