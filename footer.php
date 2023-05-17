@@ -3,7 +3,8 @@
         <?php
         wp_nav_menu(array(
             'theme_location' => 'footer-menu',
-            'container_class' => 'footer-menu-class list-none'
+            'menu_class' => 'footer-menu list-none space-y-2',
+            'container' => false,
         ));
         ?>
     </nav>
