@@ -8,9 +8,10 @@
 
 <body <?php body_class(); ?>>
 <header class="header px-6 py-4">
-    <div class="flex items-center justify-between">
+    <div class="container mx-auto flex items-center justify-between">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="text-xl font-semibold flex items-center gap-3">
-            <img src="<?php echo wp_get_attachment_url(get_option("fxwp_favicon")); ?> " alt="Logo" class="h-8 w-auto sm:h-10">
+            <img src="<?php echo wp_get_attachment_url(get_option("fxwp_favicon")); ?> " alt="Logo"
+                 class="h-8 w-auto sm:h-10">
             <?php bloginfo('name'); ?>
         </a>
 
@@ -28,7 +29,7 @@
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'header-menu',
-                'menu_class' => 'header-menu list-none sm:flex sm:justify-center sm:space-x-4',
+                'menu_class' => 'header-menu',
                 'container' => false
             ));
             ?>

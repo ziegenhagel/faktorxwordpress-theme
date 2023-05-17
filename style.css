@@ -12,28 +12,25 @@ Text Domain: fxwp
 
 :root {
     --text-color: #000;
-    --primary-color: #e385c9;
+    --primary-color: #a60505;
     --secondary-color: #0f92be;
 
     --primary-bg: #fff;
     --secondary-bg: #fff;
 
-    --footer-color: #fff;
-}
-
-.footer-menu {
-    @apply mt-2;
+    --footer-bg: #ffeccc;
+    --footer-color: #424242;
 }
 
 .footer-menu ul {
-    @apply flex flex-col border-t border-gray-200
+    @apply flex flex-col gap-2 pb-2
 }
 
 .footer-menu li a {
 }
 
 .footer-menu > ul > li > a {
-    @apply p-1 text-lg block ;
+    @apply block;
     color: var(--footer-color);
 }
 
@@ -41,13 +38,8 @@ Text Domain: fxwp
     @apply cursor-pointer;
 }
 
-
 .footer-menu a {
-    @apply text-gray-800 hover:underline block
-}
-
-footer p {
-    @apply text-gray-800 px-2 block
+    @apply hover:underline block
 }
 
 .header-menu > ul > li > a {
@@ -60,18 +52,58 @@ footer p {
 }
 
 .header {
-    background: var(--primary-bg);
-    color: var(--text-color);
+    background: var(--primary-color);
+    color: var(--primary-bg);
 }
 
 body {
     background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-color);
+}
+
+.pre-footer-section {
+    background: var(--primary-color);
+    color: var(--primary-bg);
+}
+
+.pre-footer-section a {
+    @apply hover:underline;
+}
+
+.pre-footer-section a:hover {
+    @apply cursor-pointer;
+
+}
+
+.pre-footer-section h2 {
+    @apply text-2xl;
+}
+
+main {
+    @apply p-4;
+}
+
+.content-area {
+    @apply bg-white;
+}
+
+#sidebar {
+    display: none
+}
 
 /* on bigger screens */
 @media (min-width: 768px) {
-    .footer-menu ul {
-        @apply flex-row
+    .header-menu > ul {
+        @apply flex-row;
     }
+
+    .footer-menu ul {
+        @apply flex-row;
+    }
+
 }
+

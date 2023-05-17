@@ -2,7 +2,7 @@
 get_header(); ?>
 
     <div id="primary" class="content-area">
-        <main id="main" class="site-main">
+        <main id="main" class="site-main container mx-auto">
 
             <?php
             if (have_posts()) :
@@ -22,7 +22,7 @@ get_header(); ?>
                     /*
                      * Enthält das Post-Format-spezifische Template für den Inhalt.
                      */
-                    get_template_part('template-parts/content', get_post_format());
+                    get_template_part('template-parts/content', get_post_type());
 
                 endwhile;
 
@@ -39,5 +39,4 @@ get_header(); ?>
     </div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
