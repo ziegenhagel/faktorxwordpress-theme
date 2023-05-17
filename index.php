@@ -4,6 +4,7 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main container mx-auto">
 
+
             <?php
             if (have_posts()) :
 
@@ -15,17 +16,12 @@ get_header(); ?>
                 <?php
                 endif;
 
-                /* Starte die Schleife */
-                while (have_posts()) :
-                    the_post();
-
-                    /*
-                     * Enthält das Post-Format-spezifische Template für den Inhalt.
-                     */
-                    get_template_part('template-parts/content', get_post_type());
-
-                endwhile;
-
+                the_post();
+                if (!is_home() && !is_front_page()) :
+                    breadcrumb();
+                    echo "<h1 class=' post-title    '>" . get_the_title() . "</h1>";
+                endif;
+                get_template_part('template-parts/content', get_post_type());
                 the_posts_navigation();
 
             else :

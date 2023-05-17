@@ -91,6 +91,16 @@ main {
     @apply bg-white;
 }
 
+.breadcrumb {
+    @apply text-sm;
+}
+
+.post-title {
+    @apply text-3xl font-bold mt-4 mb-4 py-2 px-2;
+    background: var(--primary-color);
+    color: var(--primary-bg);
+}
+
 #sidebar {
     display: none
 }

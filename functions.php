@@ -47,3 +47,33 @@ function fxwp_custom_theme_customizer( $wp_customize ) {
     }
 }
 add_action( 'customize_register', 'fxwp_custom_theme_customizer' );
+
+
+function breadcrumb() {
+    // Get the current post/page ID
+    $post_id = get_queried_object_id();
+
+    // Initialize an empty breadcrumb string
+    $breadcrumb = '';
+
+    // Set the separator character for the breadcrumbs
+    $separator = '<span class="breadcrumb-separator"> / </span>';
+
+    // Add the Home link
+    $breadcrumb .= '<a href="' . esc_url(home_url('/')) . '">Home</a>' . $separator;
+
+    // Add the parent pages
+    $parent_ids = get_post_ancestors($post_id);
+    if ($parent_ids) {
+        $parent_ids = array_reverse($parent_ids);
+        foreach ($parent_ids as $parent_id) {
+            $breadcrumb .= '<a href="' . esc_url(get_permalink($parent_id)) . '">' . get_the_title($parent_id) . '</a>' . $separator;
+        }
+    }
+
+    // Add the current page/post
+    $breadcrumb .= '<span class="current">' . get_the_title($post_id) . '</span>';
+
+    // Return the breadcrumb HTML
+    echo '<div class="breadcrumb">' . $breadcrumb . '</div>';
+}
