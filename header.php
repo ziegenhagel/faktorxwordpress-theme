@@ -12,7 +12,9 @@
         <a href="<?php echo esc_url(home_url('/')); ?>" class="text-xl font-semibold flex items-center gap-3">
             <img src="<?php echo wp_get_attachment_url(get_option("fxwp_favicon")); ?> " alt="Logo"
                  class="h-8 w-auto sm:h-10">
-            <?php bloginfo('name'); ?>
+            <div class="hidden sm:block">
+                <?php bloginfo('name'); ?>
+            </div>
         </a>
 
         <div class="sm:hidden">
@@ -40,7 +42,7 @@
         <?php
         wp_nav_menu(array(
             'theme_location' => 'header-menu',
-            'menu_class' => 'header-menu list-none space-y-2',
+            'menu_class' => 'header-menu list-none ',
             'container' => false,
         ));
         ?>

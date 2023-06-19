@@ -19,8 +19,20 @@ if (!empty($columns_content)) :
 <?php endif; ?>
 
 
+<div class="pre-footer">
+    <div class="container  mx-auto px-4">
+        <?php
+        // render page 18
+        $page = get_post(18);
+        echo apply_filters('the_content', $page->post_content);
+        // have the edit link
+        edit_post_link(__('Edit', 'fxwp'), '<p>', '</p>', 18, 'post-edit-link');
+        ?>
+    </div>
+</div>
+
 <footer>
-    <div class="container mx-auto py-6">
+    <div class="container mx-auto py-6 px-4">
         <nav class="footer-menu">
             <?php
             wp_nav_menu(array(

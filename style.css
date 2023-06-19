@@ -12,13 +12,13 @@ Text Domain: fxwp
 
 :root {
     --text-color: #000;
-    --primary-color: #a60505;
+    --primary-color: #8c1a44;
     --secondary-color: #0f92be;
 
     --primary-bg: #fff;
     --secondary-bg: #fff;
 
-    --footer-bg: #ffeccc;
+    --footer-bg: #e3ddd4;
     --footer-color: #424242;
 }
 
@@ -57,7 +57,6 @@ Text Domain: fxwp
 }
 
 body {
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 footer {
@@ -106,6 +105,15 @@ main {
     display: none
 }
 
+
+.header-menu li a {
+    @apply px-2 py-1 text-lg block border-t border-gray-200/50;
+}
+
+.header-menu li:last-of-type a {
+    @apply border-b border-gray-200/50;
+}
+
 /* on bigger screens */
 @media (min-width: 768px) {
     .header-menu > ul {
@@ -120,5 +128,54 @@ main {
         @apply px-0;
     }
 
+    .header-menu {
+        @apply flex;
+    }
+
+    .header-menu li a {
+        @apply px-4 py-2 border-t-0 text-xl block transition-colors duration-200 text-white/50;
+    }
+
+    .header-menu li:last-of-type a {
+        @apply border-b-0;
+    }
+
+    .header-menu li a:hover {
+        @apply cursor-pointer border-b-2 border-white/50;
+    }
+
+    .header-menu li.current-menu-item a {
+        @apply cursor-pointer border-b-2 border-white text-white;
+    }
 }
 
+.pre-footer {
+    background: var(--primary-color);
+    padding: 15px 0;
+    color: white;
+}
+
+.pre-footer a {
+    @apply hover:underline;
+}
+
+.pre-footer .wp-block-image .alignright {
+    float: none;
+    margin: .5em 0 .5em auto;
+}
+
+.pre-footer h2 {
+    @apply text-2xl font-bold my-2
+}
+
+footer .footer-menu li {
+    @apply border-r border-gray-500/50 pr-2;
+}
+
+footer .footer-menu li:last-child {
+    @apply border-r-0;
+}
+
+.page-title {
+    @apply text-3xl font-bold mt-4 mb-4 py-2 px-2;
+}
