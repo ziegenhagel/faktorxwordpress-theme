@@ -306,6 +306,9 @@ footer .footer-menu li:last-child {
 
 /* CHANGES V3 */
 
+
+/* Inline #26 | https://rd.look-think-deliver.com/ */
+
 .sub-menu {
     display: none;
 }
@@ -324,12 +327,23 @@ footer .footer-menu li:last-child {
     border-color: #ffffff80;
 }
 
+
 .sub-menu li.menu-item a:hover {
+    box-shadow: 0px -2px 0px #ffffff80 inset;
 }
 
 .sub-menu li.menu-item a {
     /* color: #ffffff80 !important; */
     /* border-color: #ffffff80; */
+}
+
+.menu-item-has-children:hover .sub-menu {
+    /* .menu-bg-desktop li, .menu-overlay-mobile .container li { animation: fadeInSlideDown .5s forwards; */
+    /* padding: 20px; */
+    padding: 2px 0;
+}
+
+.sub-menu {
 }
 
 .menu-item-has-children:hover .sub-menu {
@@ -348,7 +362,6 @@ footer .footer-menu li:last-child {
 }
 
 .menu-item a:hover {
-    clor: ;
     color: #ffffffd0;
 }
 
@@ -360,4 +373,3 @@ footer .footer-menu li:last-child {
         /* border-color: #ffffff80; */
     }
 }
-
