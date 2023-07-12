@@ -179,3 +179,185 @@ footer .footer-menu li:last-child {
 .page-title {
     @apply text-3xl font-bold mt-4 mb-4 py-2 px-2;
 }
+
+
+/* CHANGES V1 */
+
+.sub-menu {
+    display: none;
+}
+
+.menu-item-has-children:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--primary-color);
+    padding: 20px;
+    animation: fadeInSlideDown .5s forwards;
+}
+
+@keyframes fadeInSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sub-menu li.menu-item a {
+    color: #ffffff80 !important;
+    border-color: #ffffff80;
+}
+
+.sub-menu li.menu-item a:hover {
+    color: white;
+    border-color: white;
+}
+
+.sub-menu li.menu-item a {
+    /* color: #ffffff80 !important; */
+    color: #ffffff80;
+}
+
+/* CHANGES V2 */
+
+/* Inline #26 | https://rd.look-think-deliver.com/ */
+
+.sub-menu {
+    display: none;
+}
+
+.menu-item-has-children:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--primary-color);
+    padding: 20px;
+}
+
+.sub-menu li.menu-item a {
+    color: #ffffff80 !important;
+    border-color: #ffffff80;
+}
+
+.sub-menu li.menu-item a:hover {
+    color: white;
+    border-color: white;
+}
+
+.sub-menu li.menu-item a {
+    /* color: #ffffff80 !important; */
+    color: #ffffff80;
+}
+
+.menu-item-has-children:hover .sub-menu {
+    /* }: ; */
+    \}: ;
+}
+
+.sub-menu {
+}
+
+.menu-item-has-children:hover .sub-menu {
+    /* .menu-bg-desktop li, .menu-overlay-mobile .container li { animation: fadeInSlideDown .5s forwards; */
+    /* padding: 20px; */
+    \.menu-bg-desktop\ li\,\ \.menu-overlay-mobile\ \.container\ li\ \{\ animation: fadeInSlideDown .5s forwards;
+    \}: ;
+    \.menu-bg-desktop\ li\,\ \.menu-overlay-mobile\ \.container\ li\ \{\ animation: fadeInSlideDown .5s forwards;
+    padding: 2px 0;
+    \}: ;
+}
+
+.sub-menu {
+}
+
+.menu-item-has-children:hover .sub-menu {
+    /* padding: 2px 0; */
+    padding: 20px;
+    top: ;
+}
+
+.menu-item-has-children a {
+    /* } 100% { opacity: 1; */
+    \}\ 100\%\ \{\ opacity: 1;
+    \}\ \}: ;
+    border-color: #ffffff80;
+    --tw-border-opacity: 1;
+}
+
+.menu-item-has-children:hover {
+    -webkit-box-sizing: border-box;
+    box-shadow: 0px -4px 0px #ffffff80 inset;
+}
+
+/* style.min.css | https://rd.look-think-deliver.com/wp-content/themes/faktorxwordpress-theme-main/style.min.css?ver=6.2.2 */
+
+@media (min-width: 768px) {
+    .header-menu li a:hover {
+        /* border-bottom-width: 2px; */
+        /* border-color: #ffffff80; */
+    }
+}
+
+/* CHANGES V3 */
+
+.sub-menu {
+    display: none;
+}
+
+.menu-item-has-children:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--primary-color);
+    padding: 20px;
+}
+
+.sub-menu li.menu-item a {
+    color: #ffffff80 !important;
+    border-color: #ffffff80;
+}
+
+.sub-menu li.menu-item a:hover {
+}
+
+.sub-menu li.menu-item a {
+    /* color: #ffffff80 !important; */
+    /* border-color: #ffffff80; */
+}
+
+.menu-item-has-children:hover .sub-menu {
+    /* padding: 2px 0; */
+    padding: 20px;
+}
+
+.menu-item-has-children a {
+    border-color: #ffffff80;
+    --tw-border-opacity: 1;
+}
+
+.menu-item-has-children:hover {
+    -webkit-box-sizing: border-box;
+    box-shadow: 0px -4px 0px #ffffff80 inset;
+}
+
+.menu-item a:hover {
+    clor: ;
+    color: #ffffffd0;
+}
+
+/* style.min.css | https://rd.look-think-deliver.com/wp-content/themes/faktorxwordpress-theme-main/style.min.css?ver=6.2.2 */
+
+@media (min-width: 768px) {
+    .header-menu li a:hover {
+        /* border-bottom-width: 2px; */
+        /* border-color: #ffffff80; */
+    }
+}
+
