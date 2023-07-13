@@ -10,6 +10,15 @@ Text Domain: fxwp
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .shmenu {
+        box-shadow: 0px -2px 0px #ffffff80 inset;
+    }
+    .shmenuActive {
+        box-shadow: 0px -2px 0px white inset;
+    }
+}
+
 :root {
     --text-color: #000;
     --primary-color: #8c1a44;
@@ -114,6 +123,10 @@ main {
     @apply border-b border-gray-200/50;
 }
 
+.sub-menu {
+    @apply hidden;
+}
+
 /* on bigger screens */
 @media (min-width: 768px) {
     .header-menu > ul {
@@ -133,7 +146,7 @@ main {
     }
 
     .header-menu li a {
-        @apply px-4 py-2 border-t-0 text-xl block transition-colors duration-200 text-white/50;
+        @apply px-4 py-2 border-t-0 text-xl block transition-colors duration-200 /*text-white/50*/;
     }
 
     .header-menu li:last-of-type a {
@@ -141,12 +154,18 @@ main {
     }
 
     .header-menu li a:hover {
-        @apply cursor-pointer border-b-2 border-white/50;
+        @apply cursor-pointer /*border-b-2 border-white/50*/;
     }
 
-    .header-menu li.current-menu-item a {
-        @apply cursor-pointer border-b-2 border-white text-white;
+    .header-menu li.current-menu-item > a {
+        @apply cursor-pointer /*border-b-2 border-white text-white*/;
+        @apply shmenuActive;
     }
+}
+
+li.menu-item .current-menu-item > a
+{
+    @apply text-white;
 }
 
 .pre-footer {
@@ -180,196 +199,66 @@ footer .footer-menu li:last-child {
     @apply text-3xl font-bold mt-4 mb-4 py-2 px-2;
 }
 
+/* ema changes */
 
-/* CHANGES V1 */
-
-.sub-menu {
-    display: none;
-}
-
-.menu-item-has-children:hover .sub-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
+.menu-item-has-children:hover > .sub-menu {
+    @apply flex flex-col absolute z-10 p-5;
     background-color: var(--primary-color);
-    padding: 20px;
-    animation: fadeInSlideDown .5s forwards;
 }
 
-@keyframes fadeInSlideDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-.sub-menu li.menu-item a {
-    color: #ffffff80 !important;
-    border-color: #ffffff80;
-}
-
+/* schon älter
 .sub-menu li.menu-item a:hover {
-    color: white;
-    border-color: white;
-}
-
-.sub-menu li.menu-item a {
-    /* color: #ffffff80 !important; */
-    color: #ffffff80;
-}
-
-/* CHANGES V2 */
-
-/* Inline #26 | https://rd.look-think-deliver.com/ */
-
-.sub-menu {
-    display: none;
-}
-
-.menu-item-has-children:hover .sub-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
-    background-color: var(--primary-color);
-    padding: 20px;
-}
-
-.sub-menu li.menu-item a {
-    color: #ffffff80 !important;
-    border-color: #ffffff80;
-}
-
-.sub-menu li.menu-item a:hover {
-    color: white;
-    border-color: white;
-}
-
-.sub-menu li.menu-item a {
-    /* color: #ffffff80 !important; */
-    color: #ffffff80;
-}
-
-.menu-item-has-children:hover .sub-menu {
-    /* }: ; */
-    \}: ;
-}
-
-.sub-menu {
-}
-
-.menu-item-has-children:hover .sub-menu {
-    /* .menu-bg-desktop li, .menu-overlay-mobile .container li { animation: fadeInSlideDown .5s forwards; */
-    /* padding: 20px; */
-    \.menu-bg-desktop\ li\,\ \.menu-overlay-mobile\ \.container\ li\ \{\ animation: fadeInSlideDown .5s forwards;
-    \}: ;
-    \.menu-bg-desktop\ li\,\ \.menu-overlay-mobile\ \.container\ li\ \{\ animation: fadeInSlideDown .5s forwards;
-    padding: 2px 0;
-    \}: ;
-}
-
-.sub-menu {
-}
-
-.menu-item-has-children:hover .sub-menu {
-    /* padding: 2px 0; */
-    padding: 20px;
-    top: ;
-}
-
-.menu-item-has-children a {
-    /* } 100% { opacity: 1; */
-    \}\ 100\%\ \{\ opacity: 1;
-    \}\ \}: ;
-    border-color: #ffffff80;
-    --tw-border-opacity: 1;
-}
-
-.menu-item-has-children:hover {
-    -webkit-box-sizing: border-box;
-    box-shadow: 0px -4px 0px #ffffff80 inset;
-}
-
-/* style.min.css | https://rd.look-think-deliver.com/wp-content/themes/faktorxwordpress-theme-main/style.min.css?ver=6.2.2 */
-
-@media (min-width: 768px) {
-    .header-menu li a:hover {
-        /* border-bottom-width: 2px; */
-        /* border-color: #ffffff80; */
-    }
-}
-
-/* CHANGES V3 */
+    @apply shmenu text-white/[.82];
+}*/
 
 
-/* Inline #26 | https://rd.look-think-deliver.com/ */
-
-.sub-menu {
-    display: none;
-}
-
-.menu-item-has-children:hover .sub-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
-    background-color: var(--primary-color);
-    padding: 20px;
-}
-
-.sub-menu li.menu-item a {
-    color: #ffffff80 !important;
-    border-color: #ffffff80;
-}
-
-
-.sub-menu li.menu-item a:hover {
-    box-shadow: 0px -2px 0px #ffffff80 inset;
-}
-
-.sub-menu li.menu-item a {
-    /* color: #ffffff80 !important; */
-    /* border-color: #ffffff80; */
-}
-
-.menu-item-has-children:hover .sub-menu {
-    /* .menu-bg-desktop li, .menu-overlay-mobile .container li { animation: fadeInSlideDown .5s forwards; */
-    /* padding: 20px; */
-    padding: 2px 0;
-}
-
-.sub-menu {
-}
-
-.menu-item-has-children:hover .sub-menu {
-    /* padding: 2px 0; */
-    padding: 20px;
-}
-
-.menu-item-has-children a {
-    border-color: #ffffff80;
-    --tw-border-opacity: 1;
-}
-
-.menu-item-has-children:hover {
-    -webkit-box-sizing: border-box;
-    box-shadow: 0px -4px 0px #ffffff80 inset;
-}
+/*.menu-item:hover {
+    @apply shmenu;
+}*/
 
 .menu-item a:hover {
-    color: #ffffffd0;
+    @apply shmenu text-white/[.82];
 }
 
-/* style.min.css | https://rd.look-think-deliver.com/wp-content/themes/faktorxwordpress-theme-main/style.min.css?ver=6.2.2 */
+.menu-item:not(.current-menu-item) a {
+    color: #ffffff80;
+}
 
-@media (min-width: 768px) {
-    .header-menu li a:hover {
-        /* border-bottom-width: 2px; */
-        /* border-color: #ffffff80; */
-    }
+/* sub sub menu*/
+.sub-menu li.menu-item-has-children:hover > .sub-menu {
+    @apply flex flex-col absolute z-10 p-5;
+    background-color: var(--primary-color);
+    right: 100%;
+    top: 0;
+    width: 100%;
+}
+
+.sub-menu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 90%;
+}
+
+.sub-menu li.menu-item-has-children:hover > .sub-menu > .sub-menu {
+    display: block;
+    top: 0;
+    left: 100%;
+}
+
+.menu-item-has-children:hover > a {
+    @apply shmenu;
+}
+
+/* Unset default prose on images */
+
+.prose :where(img):not(:where([class~=not-prose] *))
+{
+    margin-top:unset;
+    margin-bottom:unset;
+}
+.special-block-anim:hover
+{
+    transform: scale3d(1.05, 1.05, 1);
 }
